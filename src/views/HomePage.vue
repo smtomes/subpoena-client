@@ -184,6 +184,11 @@
           </label>
         </div>
       </div>
+
+      <!-- Generate Button -->
+      <button @click="generateSubpoena" class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+        Generate Subpoena
+      </button>
     </div>
   </div>
 </template>
@@ -215,6 +220,12 @@ export default {
       selectedProsecutor: null,
       prosecutors: [],
     };
+  },
+  methods: {
+    generateSubpoena() {
+      // Implement the logic to generate a subpoena here
+      // You can access form data using this.causeNumber, this.courtNumber, etc.
+    },
   },
 };
 </script>
