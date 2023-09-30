@@ -1,7 +1,35 @@
 <template>
-  <div class="bg-gray-100 min-h-screen p-4">
-    <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg">
-      <h1 class="text-3xl font-semibold mb-6">Welcome to the Subpoena Generator</h1>
+  <div class="bg-gray-900 text-white min-h-screen p-4">
+    <div class="max-w-3xl mx-auto bg-gray-700 p-8 rounded-lg shadow-lg">
+      <h1 class="text-4xl font-bold mb-6">Subpoena Generator</h1>
+
+      <!-- Toggle switches for District Clerk and District Judge -->
+      <div class="flex justify-between mb-6">
+        <div>
+          <label class="block mb-2" for="districtClerk">District Clerk:</label>
+          <label class="switch">
+            <input
+              type="checkbox"
+              v-model="enableDistrictClerk"
+              @change="toggleDistrictClerk"
+            />
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div>
+          <label class="block mb-2" for="districtJudge">District Judge:</label>
+          <label class="switch">
+            <input
+              type="checkbox"
+              v-model="enableDistrictJudge"
+              @change="toggleDistrictJudge"
+            />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Rest of your form elements -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Cause Number -->
         <div>
@@ -219,19 +247,31 @@ export default {
       enableComplianceByEmail: false,
       selectedProsecutor: null,
       prosecutors: [],
+      enableDistrictClerk: true, // District Clerk is enabled by default
+      enableDistrictJudge: false,
     };
   },
   methods: {
     generateSubpoena() {
       // Implement the logic to generate a subpoena here
-      // You can access form data using this.causeNumber, this.courtNumber, etc.
+      // You can access form data and toggle states using the data properties
+    },
+    toggleDistrictClerk() {
+      if (this.enableDistrictClerk) {
+        this.enableDistrictJudge = false; // Disable District Judge when District Clerk is enabled
+      }
+    },
+    toggleDistrictJudge() {
+      if (this.enableDistrictJudge) {
+        this.enableDistrictClerk = false; // Disable District Clerk when District Judge is enabled
+      }
     },
   },
 };
 </script>
 
 <style scoped>
-  /* Toggle switch styles */
+  /* Toggle switch styles (unchanged) */
   .switch {
     position: relative;
     display: inline-block;
@@ -252,7 +292,7 @@ export default {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: #555555; /* Dark gray background */
     -webkit-transition: .4s;
     transition: .4s;
     border-radius: 34px;
@@ -265,14 +305,14 @@ export default {
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: white;
+    background-color: #ffffff; /* White circle */
     -webkit-transition: .4s;
     transition: .4s;
     border-radius: 50%;
   }
 
   input:checked + .slider {
-    background-color: #2196F3;
+    background-color: #2196F3; /* Blue background when checked */
   }
 
   input:focus + .slider {
