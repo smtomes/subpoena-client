@@ -38,23 +38,23 @@
             id="causeNumber"
             v-model="causeNumber"
             placeholder="Enter Cause Number"
-            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-400"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-400 text-black"
           />
         </div>
-        
+
         <!-- Court -->
         <div>
           <label class="block text-lg font-semibold mb-2" for="courtNumber">Court:</label>
           <select
             id="courtNumber"
             v-model="courtNumber"
-            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-400"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-400 text-black"
           >
             <option value="52nd">52nd</option>
             <option value="440th">440th</option>
           </select>
         </div>
-        
+
         <!-- Defendant's Name -->
         <div>
           <label class="block text-lg font-semibold mb-2" for="defendantName">Defendant's Name:</label>
@@ -62,10 +62,10 @@
             id="defendantName"
             v-model="defendantName"
             placeholder="Enter Defendant's Name"
-            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-400"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-400 text-black"
           />
         </div>
-        
+
         <!-- Proceeding -->
         <div>
           <label class="block text-lg font-semibold mb-2" for="proceeding">Proceeding:</label>
@@ -73,10 +73,10 @@
             id="proceeding"
             v-model="proceeding"
             placeholder="Enter Proceeding"
-            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-400"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-400 text-black"
           />
         </div>
-        
+
         <!-- Appearance Date -->
         <div>
           <label class="block text-lg font-semibold mb-2" for="appearanceDate">Appearance Date:</label>
@@ -84,24 +84,24 @@
             id="appearanceDate"
             v-model="appearanceDate"
             placeholder="Enter Appearance Date"
-            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-400"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-400 text-black"
           />
         </div>
-        
+
         <!-- Appearance Location -->
         <div>
           <label class="block text-lg font-semibold mb-2" for="appearanceLocation">Appearance Location:</label>
           <select
             id="appearanceLocation"
             v-model="appearanceLocation"
-            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-400"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-400 text-black"
           >
             <option value="52nd Courthouse">52nd Courthouse</option>
             <option value="440th Courthouse">440th Courthouse</option>
             <option value="Gatesville Civic Center">Gatesville Civic Center</option>
           </select>
         </div>
-        
+
         <!-- Witness Name -->
         <div>
           <label class="block text-lg font-semibold mb-2" for="witnessName">Witness Name:</label>
@@ -109,10 +109,10 @@
             id="witnessName"
             v-model="witnessName"
             placeholder="Enter Witness Name"
-            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-400"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-400 text-black"
           />
         </div>
-        
+
         <!-- Witness Address -->
         <div>
           <label class="block text-lg font-semibold mb-2" for="witnessAddress">Witness Address:</label>
@@ -120,10 +120,10 @@
             id="witnessAddress"
             v-model="witnessAddress"
             placeholder="Enter Witness Address"
-            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-400"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-400 text-black"
           />
         </div>
-        
+
         <!-- Witness Phone Number -->
         <div>
           <label class="block text-lg font-semibold mb-2" for="witnessPhoneNumber">Witness Phone Number:</label>
@@ -131,10 +131,10 @@
             id="witnessPhoneNumber"
             v-model="witnessPhoneNumber"
             placeholder="Enter Witness Phone Number"
-            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-400"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-400 text-black"
           />
         </div>
-        
+
         <!-- Witness Vocation -->
         <div>
           <label class="block text-lg font-semibold mb-2" for="witnessVocation">Witness Vocation:</label>
@@ -142,10 +142,10 @@
             id="witnessVocation"
             v-model="witnessVocation"
             placeholder="Enter Witness Vocation"
-            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-400"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-400 text-black"
           />
         </div>
-        
+
         <!-- Service Date -->
         <div>
           <label class="block text-lg font-semibold mb-2" for="serviceDate">Service Date:</label>
@@ -153,24 +153,24 @@
             id="serviceDate"
             v-model="serviceDate"
             placeholder="Enter Service Date"
-            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-400"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-400 text-black"
           />
         </div>
-        
+
         <!-- Prosecutor -->
         <div>
           <label class="block text-lg font-semibold mb-2" for="prosecutor">Prosecutor:</label>
           <select
             id="prosecutor"
             v-model="selectedProsecutor"
-            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-400"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-400 text-black"
           >
             <option v-for="prosecutor in prosecutors" :value="prosecutor">
               {{ prosecutor.name }}
             </option>
           </select>
         </div>
-        
+
         <!-- Items to Bring -->
         <div>
           <label class="block text-lg font-semibold mb-2" for="itemsToBring">Items to Bring:</label>
@@ -178,7 +178,7 @@
             id="itemsToBring"
             v-model="itemsToBring"
             placeholder="Enter Items to Bring"
-            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-400"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-400 text-black"
             :disabled="!enableItemsToBring"
           />
           <label class="switch">
@@ -186,7 +186,7 @@
             <span class="slider"></span>
           </label>
         </div>
-        
+
         <!-- Business Name -->
         <div>
           <label class="block text-lg font-semibold mb-2" for="businessName">Business Name:</label>
@@ -194,7 +194,7 @@
             id="businessName"
             v-model="businessName"
             placeholder="Enter Business Name"
-            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-400"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-400 text-black"
             :disabled="!enableBusinessName"
           />
           <label class="switch">
@@ -202,7 +202,7 @@
             <span class="slider"></span>
           </label>
         </div>
-        
+
         <!-- Compliance by email -->
         <div>
           <label class="block text-lg font-semibold mb-2" for="complianceByEmail">Compliance by email?</label>
@@ -251,8 +251,18 @@ export default {
       enableDistrictJudge: false,
     };
   },
+  computed: {
+    isEitherToggleEnabled() {
+      return this.enableDistrictClerk || this.enableDistrictJudge;
+    },
+  },
   methods: {
     generateSubpoena() {
+      if (!this.isEitherToggleEnabled) {
+        // Display an error message or take appropriate action when neither toggle is enabled
+        alert("Please enable either District Clerk or District Judge.");
+        return;
+      }
       // Implement the logic to generate a subpoena here
       // You can access form data and toggle states using the data properties
     },
