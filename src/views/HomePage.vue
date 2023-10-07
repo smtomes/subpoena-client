@@ -259,26 +259,31 @@ export default {
   methods: {
     generateSubpoena() {
       if (!this.isEitherToggleEnabled) {
-        // Display an error message or take appropriate action when neither toggle is enabled
+        // Display an error message when neither toggle is enabled
         alert("Please enable either District Clerk or District Judge.");
         return;
       }
+
       // Implement the logic to generate a subpoena here
       // You can access form data and toggle states using the data properties
     },
     toggleDistrictClerk() {
-      if (this.enableDistrictClerk) {
+      if (!this.enableDistrictClerk) {
+        this.enableDistrictClerk = true; // Ensure that at least one toggle is enabled
         this.enableDistrictJudge = false; // Disable District Judge when District Clerk is enabled
       }
     },
     toggleDistrictJudge() {
-      if (this.enableDistrictJudge) {
+      if (!this.enableDistrictJudge) {
+        this.enableDistrictJudge = true; // Ensure that at least one toggle is enabled
         this.enableDistrictClerk = false; // Disable District Clerk when District Judge is enabled
       }
     },
   },
 };
 </script>
+
+
 
 <style scoped>
   /* Toggle switch styles (unchanged) */
