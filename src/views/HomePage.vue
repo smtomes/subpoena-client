@@ -205,8 +205,6 @@ export default {
       this.enableDistrictClerk = false;
     },
   },
-
-
 };
 </script>
 
