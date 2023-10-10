@@ -1,7 +1,7 @@
 <template>
   <div class="bg-gray-900 text-white min-h-screen p-4">
     <div class="max-w-3xl mx-auto bg-gray-700 p-8 rounded-lg shadow-lg">
-      <h1 class="text-4xl font-bold mb-6">Subpoena Generator</h1>
+      <h1 class="text-4xl font-bold mb-6">Coryell County Subpoena Generator</h1>
 
       <!-- Toggle switches for District Clerk and District Judge -->
       <div class="flex justify-between mb-6">
